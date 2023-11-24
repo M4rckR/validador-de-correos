@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <header class="container mx-auto mt-24   font-franklin ">
+    <img class="w-16 mx-auto sm:w-20"  src="src/svg/logo.svg" alt="logo empresa">
+    <div class="mt-8 text-center">
+      <h2 class="text-2xl font-light">We are launching <span class="font-black">soon!</span> </h2>
+      <p class="mt-4">Subscribe and get notified</p>
+    </div>
+    <div>
+      <form class="mt-10 flex flex-col  items-center gap-4 sm:flex-row sm:justify-center ">
+        <div id="contenedor" class="flex w-64 py-2 px-4 rounded-[2rem] border border-m-gray sm:w-80 sm:py-4 sm:rounded-lg sm:text-xl  sm:h-14">
+          <input id="correo" class=" outline-none  text-[.8rem] placeholder:text-[.8rem] sm:text-xl sm:placeholder:text-[1rem] " type="email" placeholder="Your email address">
+        </div>
+  
+        <button id="btnComprobar" class=" w-64 bg-m-blue text-white py-2 px-4 rounded-[2rem]  text-[.8rem] font-semibold shadow transition active:bg-m-dblue sm:text-[1rem] sm:w-32 sm:py-4 sm:rounded-lg sm:h-14" type="submit">Notify Me</button>
+      </form>
+    </div>
+    
+  </header>
+
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
