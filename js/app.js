@@ -21,18 +21,26 @@ document.addEventListener('DOMContentLoaded',() => {
         // Seleccion de input
         limpiarAlertas()
         const alerta = document.createElement('P')
-        enviado?  inputCorreo.classList.add('border-green-500') : inputCorreo.classList.add('border-red-500')
         alerta.className = 'error px-4 text-xs'
-        enviado? alerta.classList.add('text-green-500') : alerta.classList.add('text-red-500');
-
-        enviado? setTimeout(() => {
-            limpiarAlertas()
-            inputCorreo.classList.remove('border-green-500')
-            inputCorreo.classList.remove('border-red-500')
-            inputCorreo.value = ''
-        }, 3000) : null;
-        
         alerta.textContent = mensaje
+        if(enviado){
+            inputCorreo.classList.add('border-green-500')
+            inputCorreo.classList.remove('border-red-500')
+            alerta.classList.toggle('text-green-500')
+            setTimeout(() => {
+                limpiarAlertas()
+                inputCorreo.classList.remove('border-green-500')
+                inputCorreo.classList.remove('border-red-500')
+                inputCorreo.value = ''
+            }, 3000)
+        }  
+        else {
+            inputCorreo.classList.add('border-red-500')
+            alerta.classList.add('text-red-500');
+        }
+        
+        
+
         formulario.appendChild(alerta)
     }
 
